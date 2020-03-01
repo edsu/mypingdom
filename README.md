@@ -24,14 +24,13 @@ Configure the sites list with the list of URLs to monitor.
       }
     ]
 
-Each site must have a `name` and a `url`.
+A few things to note:
 
-If `cache_bust` is set to True then a uniquequery string will be attached to
-the url to prevent a cache from reporting it as ok.
+* Each site must have a `name` and a `url`.
+* If `cache_bust` is set to True then a uniquequery string will be attached to 
+  the url to prevent a cache from reporting it as ok.
+* If `check` is supplied it will use the function to determine if the response
+  was ok. In this case it's attempting to parse a JSON response and check the
+  length of the data structure. If no `check` is supplied the response will just
+  be checked that it is 200 OK.
 
-If `check` is supplied it will use the function to determine if the response
-was ok. In this case it's attempting to parse a JSON response and check the
-length of the data structure. If no `check` is supplied the response will just
-be checked that it is 200 OK.
-
-If any of the checks fail an email is sent.
