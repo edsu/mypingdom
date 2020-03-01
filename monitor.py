@@ -8,6 +8,8 @@ import smtplib
 
 from urllib.request import urlopen
 
+# TODO: maybe this configuration should be in a yaml file?
+
 sites = [
     {
         'name': 'mith',
@@ -17,7 +19,7 @@ sites = [
     {
         'name': 'docnow',
         'url': 'https://demo.docnow.io/api/v1/world',
-        'check': lambda resp: False #len(json.load(resp)) > 0
+        'check': lambda resp: len(json.load(resp)) > 0
     }
 ]
 
