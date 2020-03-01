@@ -49,7 +49,7 @@ def send_email(alert_name, body):
         msg = template.format(
             from_email=from_email,
             to_email=to_email,
-            subject="Monitor Alert: {}".format(alert_name),
+            subject="MyPingdom Alert: {}".format(alert_name),
             body=body
         )
         smtp.sendmail(from_email, [to_email], msg)
