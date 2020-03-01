@@ -12,16 +12,16 @@ environment.  You can do this in cron like so:
 Configure the sites list with the list of URLs to monitor.
 
     sites = [
-  		{
-				'name': 'mith',
- 			  'url': 'https://mith.umd.edu',
-    		'cache_bust': True
-   		},
-   		{
-   			'name': 'docnow',
-   			'url': 'https://demo.docnow.io/api/v1/world',
-   			'check': lambda resp: len(json.load(resp)) > 0
-   		}
+      {
+        'name': 'mith',
+        'url': 'https://mith.umd.edu',
+        'cache_bust': True
+      },
+      {
+        'name': 'docnow',
+        'url': 'https://demo.docnow.io/api/v1/world',
+        'check': lambda resp: len(json.load(resp)) > 0
+      }
     ]
 
 Each site must have a `name` and a `url`.
