@@ -4,10 +4,10 @@ failures by email. It's not meant to be general purpose, it's just meant for me
 Maybe at some point it would be good to put the configuration in a yaml file or
 something...
 
-When you run monitor.py you must make sure SMTP_PASSWORD is set in the
+When you run mypingdom.py you must make sure SMTP_PASSWORD is set in the
 environment.  You can do this in cron like so:
 
-    0 * * * * SMTP_PASSWORD="MY_PASSWORD" /home/ed/Projects/monitor/monitor.py
+    0 * * * * SMTP_PASSWORD="MY_PASSWORD" /home/ed/Projects/mypingdom/mypingdom.py
 
 Configure the sites list with the list of URLs to monitor.
 
