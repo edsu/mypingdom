@@ -1,8 +1,7 @@
-**mypingdomr.py** is a little script for monitoring URLs and then reporting any
-failures by email. It's not meant to be general purpose, it's just meant for me
-:-) But if you find it useful obviously feel free to take it and modify it.
-Maybe at some point it would be good to put the configuration in a yaml file or
-something...
+**mypingdomr.py** is a little script for monitoring URLs with email and cron.
+It's not meant to be general purpose, it's just meant for me :-) But if you find
+it useful obviously feel free to take it and modify it.  Maybe at some point it
+would be good to put the configuration in a yaml file or something...
 
 When you run mypingdom.py you must make sure SMTP_PASSWORD is set in the
 environment.  You can do this in cron like so:
